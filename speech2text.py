@@ -8,7 +8,7 @@ import speech_recognition as sr
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
 
-TOKEN = os.environ.get("TOKEN", "")
+TOKEN = os.environ.get("TOKEN", "6288718182:AAGQtmsCPkMT5RdBvmoK5glzZAji40UYom0")
 bot = telebot.TeleBot(TOKEN)
 r = sr.Recognizer()
 global emode
@@ -26,7 +26,7 @@ def get_large_audio_transcription(path,message):
     folder_name = f"audio-chunks-{id}"
     if not os.path.isdir(folder_name):
         os.mkdir(folder_name)
-    whole_text = ""
+    whole_text = "WD Farooq"
 
     tsize = os.path. getsize(path)
     edi = bot.send_message(message.chat.id,f"Total Size: {tsize}")
