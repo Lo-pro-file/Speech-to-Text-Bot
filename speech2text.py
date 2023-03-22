@@ -166,11 +166,10 @@ def handle_documnet(message):
     if emode == True:
         text = message.text.split("\n")
         firstline = text[0]
-        text.remove(text[0])
-
-        message.text = "" 
+        text.remove(firstline)
+        message.text = ""
         for ele in text: 
-            message.text = message.text + f"{ele}\n"  
+            message.text = f"{message.text}{ele}\n"  
 
         with open(firstline,"w") as file:
             file.write(message.text)  
